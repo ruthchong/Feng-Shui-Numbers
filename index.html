@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字玄学</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>数字玄学</h1>
+        <p>请输入你的出生日期：</p>
+        <input type="number" id="day" placeholder="日 (1-31)" min="1" max="31">
+        <input type="number" id="month" placeholder="月 (1-12)" min="1" max="12">
+        <input type="number" id="year" placeholder="年 (例如: 1990)" min="1900" max="2100">
+        <br>
+        <button onclick="calculateAndShowResult()">计算</button>
+
+        <div id="triangle" class="triangle"></div>
+        <div id="result"></div>
+        <div id="description"></div>
+
+        <!-- 特别号码显示区域 -->
+        <div id="special-numbers"></div>
+        <div id="special-description"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
