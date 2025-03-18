@@ -2,8 +2,11 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
     <title>数字玄学</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -32,7 +35,12 @@
         <!-- 特别号码显示区域 -->
         <div id="special-numbers"></div>
         <div id="special-description"></div>
-
+        <!-- 在新增的解释内容区域下方添加优缺点的显示区域 -->
+        <div id="pros-and-cons" class="explanation-section">
+            <h2></h2>
+            <p><strong>优点:</strong> <span id="pros-content"></span></p>
+            <p><strong>缺点:</strong> <span id="cons-content"></span></p>
+        </div>
         <!-- 新增的解释内容区域 -->
         <div id="personality-traits" class="explanation-section">
             <h2>个性特质</h2>

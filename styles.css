@@ -1,6 +1,6 @@
 /* 全局样式 */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
     background-color: #696969;
     color: #d0d0d0;
     margin: 0;
@@ -26,16 +26,21 @@ body {
 
 /* 标题样式 */
 h1 {
-    font-size: 2.5rem;
-    color: #4CAF50;
+    font-size: 2.0rem;
+    color: #d19527;
     margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 1.8rem;
-    color: #4CAF50;
+    font-size: 1.5rem;
+    color: #d19527;
     margin-top: 30px;
     margin-bottom: 15px;
+}
+
+h3 {
+    margin-top: -20px;
+    color:#dfa01a80;
 }
 
 /* 输入框样式 */
@@ -62,7 +67,7 @@ button {
     cursor: pointer;
     border: none;
     border-radius: 8px;
-    background-color: #4CAF50;
+    background-color: #d19527;
     color: white;
     font-size: 1rem;
     font-weight: bold;
@@ -70,7 +75,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #b18023;
     transform: scale(1.05);
 }
 
@@ -82,7 +87,7 @@ button:active {
 #result {
     font-size: 2rem;
     font-weight: bold;
-    color: #a3ffaa;
+    color: #ceae73;
     margin-top: 20px;
 }
 
@@ -90,8 +95,8 @@ button:active {
 .triangle {
     font-size: 1.5rem;
     margin-top: 20px;
-    font-family: monospace;
-    color: #666;
+    font-family: "Noto Sans JP", sans-serif;
+    color: #232323;
     white-space: pre-line;
     background-color: #f9f9f9;
     padding: 15px;
@@ -112,7 +117,7 @@ button:active {
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 10px;
-    color: #bf4646;
+    color: #f48686;
 }
 
 /* 新增的解释内容样式 */
@@ -127,7 +132,7 @@ button:active {
 
 .explanation-section h2 {
     font-size: 1.5rem;
-    color: #4CAF50;
+    color: #d6c724;
     margin-bottom: 10px;
 }
 
@@ -143,10 +148,9 @@ nav {
     top: 0; /* 固定在顶部 */
     left: 0; /* 从左侧开始 */
     width: 100%; /* 覆盖整个页面宽度 */
-    background-color: #282828;
+    background-color: #1a1a1a;
     padding: 10px;
-    border-radius: 0 0 8px 8px; /* 圆角只在下部 */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    box-shadow: 0 4px 12px rgba(255, 201, 23, 0.516); /* 添加阴影 */
     z-index: 1000; /* 确保导航栏在最上层 */
 }
 
@@ -163,7 +167,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #4CAF50;
+    color: #a68311;
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s ease;
@@ -188,13 +192,8 @@ nav ul li a:hover {
     }
 
     input {
-        width: 80%;
+        width: 50%;
         margin: 5px 0;
-    }
-
-    button {
-        width: 80%;
-        margin: 10px 0;
     }
 
     nav ul li {
@@ -205,3 +204,25 @@ nav ul li a:hover {
         font-size: 1rem; /* 在小屏幕上减小字体大小 */
     }
 }
+
+/* 新增的优点与缺点样式 */
+#pros-and-cons {
+    margin-top: 20px;
+    text-align: left;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+
+#pros-and-cons p {
+    font-size: 1rem;
+    color: #bebebe;
+    line-height: 1.6;
+}
+
+#pros-and-cons strong {
+    color: #cb7d1c;
+}
+
