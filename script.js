@@ -325,7 +325,7 @@ function calculateAndShowResult() {
     let newFinalNumber = sumDigits(newSecondLayer[0] + newSecondLayer[1]); // 3k + 3l = 3 + 3 = 6m
 
     // 生成下半部分三角形结构
-    let newTriangle = `\n--------------\n` +
+    let newTriangle = `\n------------------------\n` +
                       `${newFirstLayer[0]}   ${newFirstLayer[1]}   ${newFirstLayer[2]}   ${newFirstLayer[3]}` +
                       `\n   ${newSecondLayer[0]}        ${newSecondLayer[1]}` +
                       `\n         ${newFinalNumber}`;
@@ -416,3 +416,28 @@ function sumDigits(num) {
     }
     return num;
 }
+
+/*Slideshow*/
+document.addEventListener("DOMContentLoaded", function () {
+    let index = 0;
+    const slides = document.querySelectorAll(".slide img");
+    const totalSlides = slides.length;
+
+    function showSlide() {
+        slides.forEach((img, i) => {
+            img.style.display = i === index ? "block" : "none";
+        });
+    }
+
+    document.querySelector(".prev").addEventListener("click", function () {
+        index = (index - 1 + totalSlides) % totalSlides;
+        showSlide();
+    });
+
+    document.querySelector(".next").addEventListener("click", function () {
+        index = (index + 1) % totalSlides;
+        showSlide();
+    });
+
+    showSlide(); // 初始化显示第一张
+});
