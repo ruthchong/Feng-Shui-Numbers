@@ -10,6 +10,7 @@ body {
     align-items: center;
     min-height: 100vh;
     text-align: center;
+    padding-top: 70px; /* 为导航栏留出空间 */
 }
 
 /* 容器样式 */
@@ -20,6 +21,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     width: 100%;
+    margin-top: 20px; /* 调整容器与导航栏的间距 */
 }
 
 /* 标题样式 */
@@ -80,7 +82,7 @@ button:active {
 #result {
     font-size: 2rem;
     font-weight: bold;
-    color: #333;
+    color: #a3ffaa;
     margin-top: 20px;
 }
 
@@ -101,7 +103,7 @@ button:active {
 #description, #special-description {
     font-size: 1.1rem;
     margin-top: 10px;
-    color: #555;
+    color: #bebebe;
     line-height: 1.6;
 }
 
@@ -110,7 +112,65 @@ button:active {
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 10px;
-    color: #AA0000;
+    color: #bf4646;
+}
+
+/* 新增的解释内容样式 */
+.explanation-section {
+    margin-top: 20px;
+    text-align: left;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.explanation-section h2 {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.explanation-section p {
+    font-size: 1rem;
+    color: #bebebe;
+    line-height: 1.6;
+}
+
+/* 导航栏样式 */
+nav {
+    position: fixed; /* 固定在页面顶部 */
+    top: 0; /* 固定在顶部 */
+    left: 0; /* 从左侧开始 */
+    width: 100%; /* 覆盖整个页面宽度 */
+    background-color: #282828;
+    padding: 10px;
+    border-radius: 0 0 8px 8px; /* 圆角只在下部 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    z-index: 1000; /* 确保导航栏在最上层 */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #45a049;
 }
 
 /* 响应式设计 */
@@ -135,5 +195,13 @@ button:active {
     button {
         width: 80%;
         margin: 10px 0;
+    }
+
+    nav ul li {
+        margin: 0 10px; /* 在小屏幕上减少导航栏项之间的间距 */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* 在小屏幕上减小字体大小 */
     }
 }

@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
         <h1>数字玄学</h1>
         <p>请输入你的出生日期：</p>
@@ -23,6 +32,24 @@
         <!-- 特别号码显示区域 -->
         <div id="special-numbers"></div>
         <div id="special-description"></div>
+
+        <!-- 新增的解释内容区域 -->
+        <div id="personality-traits" class="explanation-section">
+            <h2>个性特质</h2>
+            <p id="personality-traits-content"></p>
+        </div>
+        <div id="communication" class="explanation-section">
+            <h2>沟通之道</h2>
+            <p id="communication-content"></p>
+        </div>
+        <div id="talents" class="explanation-section">
+            <h2>天赋才能</h2>
+            <p id="talents-content"></p>
+        </div>
+        <div id="career-development" class="explanation-section">
+            <h2>生涯发展</h2>
+            <p id="career-development-content"></p>
+        </div>
     </div>
 
     <script src="script.js"></script>

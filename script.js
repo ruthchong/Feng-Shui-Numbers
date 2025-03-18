@@ -1,17 +1,20 @@
 const numerologyDescriptions = {
-    1: "数字 1 代表领导力和独立性。",
-    2: "数字 2 代表合作与和谐。",
-    3: "数字 3 代表创造力和表达能力。",
-    4: "数字 4 代表稳定和努力工作。",
-    5: "数字 5 代表自由和冒险精神。",
-    6: "数字 6 代表关怀和责任感。",
-    7: "数字 7 代表智慧和精神成长。",
-    8: "数字 8 代表财富与权力。",
-    9: "数字 9 代表人道主义与慈悲心。",
+    1: "数字 1 代表领导力和独立性，但不容易与人相处。",
+    2: "数字 2 代表沟通能力佳，为人温和，但往往容易产生依赖性。",
+    3: "数字 3 代表积极/速度，动作快执行能力佳，但缺乏耐性。",
+    4: "数字 4 代表聪明，喜欢计划再执行，性格谨慎。",
+    5: "数字 5 代表为人较固执，有原则，爱好自由。",
+    6: "数字 6 代表勤劳，较有远见，但控制欲强。",
+    7: "数字 7 代表人缘佳，常有贵人在身边，比较幸运。",
+    8: "数字 8 代表责任心强，做事比较有压力，生活忙绿。",
+    9: "数字 9 代表擅长做生意，勇敢冒险，但做事比较没原则",
 };
 
 const specialNumberDescriptions = {
-    11: "11 是一个大师数字，象征灵性和直觉。",
+    11: "非常独立，做事没重点，常被人从后中伤。",
+    12: "说话很直接，经常不知道已经中伤别人",
+    13: "非常易怒和不耐烦，缺乏耐性。",
+    14: "很好的策划者，但是计划经常无法顺利进行。",
     19: "19 代表领导力和独立精神。",
     22: "22 代表建筑师之数，意味着创造和伟大的潜力。",
     33: "33 是最具奉献精神的数字，象征无私和慈爱。",
@@ -25,6 +28,22 @@ const specialNumberDescriptions = {
     911: "911 代表强大的转变能量，象征智慧与灵性成长。",
     912: "912 代表创新、成长和新方向。",
     112: "112 代表直觉和合作精神。",
+};
+
+const numerologyDetails = {
+    1: {
+        personalityTraits: "1号人个性特质：独立、自信、果断、领导力强、富有创造力。",
+        communication: "1号人沟通之道：直接、坦率、喜欢掌控对话，需要学会倾听他人。",
+        talents: "1号人天赋才能：创新、决策力强、善于解决问题。",
+        careerDevelopment: "1号人生涯发展：适合创业、管理岗位或独立工作。",
+    },
+    2: {
+        personalityTraits: "2号人个性特质：合作、敏感、温和、善于倾听、富有同情心。",
+        communication: "2号人沟通之道：温和、善于调解，需要学会表达自己的需求。",
+        talents: "2号人天赋才能：协调、合作、善于处理人际关系。",
+        careerDevelopment: "2号人生涯发展：适合团队合作、咨询或服务行业。",
+    },
+    // 其他数字的解释内容可以继续添加
 };
 
 function calculateAndShowResult() {
@@ -83,6 +102,20 @@ function calculateAndShowResult() {
 
     document.getElementById("special-numbers").innerText = "特别号码: " + specialNumbers.join(", ");
     document.getElementById("special-description").innerText = specialDescriptions || "暂无特别号码";
+
+    // 显示新增的解释内容
+    const details = numerologyDetails[finalNumber];
+    if (details) {
+        document.getElementById("personality-traits-content").innerText = details.personalityTraits;
+        document.getElementById("communication-content").innerText = details.communication;
+        document.getElementById("talents-content").innerText = details.talents;
+        document.getElementById("career-development-content").innerText = details.careerDevelopment;
+    } else {
+        document.getElementById("personality-traits-content").innerText = "暂无数据";
+        document.getElementById("communication-content").innerText = "暂无数据";
+        document.getElementById("talents-content").innerText = "暂无数据";
+        document.getElementById("career-development-content").innerText = "暂无数据";
+    }
 }
 
 // 提取特别号码（包含横向 & 斜向）
@@ -99,8 +132,9 @@ function extractSpecialNumbers(firstLayer, secondLayer, finalNumber) {
     possibleNumbers.push(parseInt(`${firstLayer[0]}${secondLayer[0]}${finalNumber}`));  // 左斜线
     possibleNumbers.push(parseInt(`${firstLayer[3]}${secondLayer[1]}${finalNumber}`));  // 右斜线
 
-    // 过滤出有效的特别号码
-    return possibleNumbers.filter(num => specialNumberDescriptions.hasOwnProperty(num));
+    // 使用 Set 去重，然后过滤出有效的特别号码
+    let uniqueNumbers = [...new Set(possibleNumbers)]; // 去重
+    return uniqueNumbers.filter(num => specialNumberDescriptions.hasOwnProperty(num));
 }
 
 // 计算第一层、第二层和最终玄学数字
