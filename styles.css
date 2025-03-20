@@ -59,6 +59,11 @@ h3 {
     color:rgb(255, 255, 255)
 }
 
+a {
+    text-decoration: none;
+    color:#c3bda8
+}
+
 /* 输入框样式 */
 input {
     padding: 10px;
@@ -459,4 +464,29 @@ footer {
 
 .story-content {
     font-size: 0.9rem;
+}
+
+
+
+.blog-post {
+    display: flex;
+    align-items: center;
+    text-align:left ;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.blog-post img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.blog-content {
+    flex: 1;
+}
+.bd-content {
+    margin-top: 100px;
+}
+.bd-p {
+    margin-bottom: 100px;
 }

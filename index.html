@@ -25,11 +25,12 @@
             <div class="bar"></div>
         </div>
         <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="story.html">鬼故事分享</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="service.html">Service</a></li>
+            <li><a href="index.html">主页</a></li>
+            <li><a href="home.html">数字玄学</a></li>            
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="story.html">灵异故事</a></li>
+            <li><a href="contact.html">联系</a></li>
+            <li><a href="service.html">服务</a></li>
         </ul>
     </nav>
     <script>
@@ -119,47 +120,137 @@
 </script>
 <!--Google Ads-->
     <div class="container">
-        <h1>数字玄学</h1>
+        <h1>数字玄学案列分享</h1>
         <h3>Numerologies</h3>
-        <p>请输入你的出生日期：</p>
-        <input type="number" id="day" placeholder="日 (1-31)" min="1" max="31">
-        <input type="number" id="month" placeholder="月 (1-12)" min="1" max="12">
-        <input type="number" id="year" placeholder="年 (例如: 1990)" min="1900" max="2100">
+        <p><a href="home.html"><点击此处跳转到数字玄学计算页面></a></p>
         <br>
-        <button onclick="calculateAndShowResult()">计算</button>
 
-        <div id="triangle" class="triangle"></div>
-        <div id="result"></div>
-        <div id="description"></div>
+        <section id="blog">
+            <h2>最新文章</h2>
+            <article class="blog-post">
+                <img src="blog-mayun.png" alt="马云">
+                <div class="blog-content">
+                    <h3><a href="#mayun">马云的富豪数字</a></h3>
+                    <p>文章摘要... <a href="#mayun">阅读更多</a></p>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="blog-guotaiming.png" alt="郭台铭">
+                <div class="blog-content">
+                    <h3><a href="#guotaiming">郭台铭的富豪数字</a></h3>
+                    <p>文章摘要... <a href="#guotaiming">阅读更多</a></p>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="blog-lijiacheng.png" alt="李嘉诚">
+                <div class="blog-content">
+                    <h3><a href="#lijiacheng">李嘉诚的富豪数字</a></h3>
+                    <p>文章摘要... <a href="#lijiacheng">阅读更多</a></p>
+                </div>
+            </article>                         
+            <article class="blog-post">
+                <img src="blog-yinengjing.png" alt="伊能静">
+                <div class="blog-content">
+                    <h3><a href="#yinengjing">伊能静的出轨数字</a></h3>
+                    <p>文章摘要... <a href="#yinengjing">阅读更多</a></p>
+                </div>
+            </article>  
+            <article class="blog-post">
+                <img src="blog-marong.png" alt="马蓉">
+                <div class="blog-content">
+                    <h3><a href="#marong">马蓉的出轨数字</a></h3>
+                    <p>文章摘要... <a href="#marong">阅读更多</a></p>
+                </div>
+            </article>  
+            <article class="blog-post">
+                <img src="blog-baibaihe.png" alt="白百何">
+                <div class="blog-content">
+                    <h3><a href="#baibaihe">白百何的出轨数字</a></h3>
+                    <p>文章摘要... <a href="#baibaihe">阅读更多</a></p>
+                </div>
+            </article>                         
+            <article class="blog-post">
+                <img src="blog-meiyanfang.png" alt="梅艳芳">
+                <div class="blog-content">
+                    <h3><a href="#meiyanfang">梅艳芳的癌症数字</a></h3>
+                    <p>文章摘要... <a href="#meiyanfang">阅读更多</a></p>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="blog-fff.png" alt="凤飞飞">
+                <div class="blog-content">
+                    <h3><a href="#fff">凤飞飞的癌症数字</a></h3>
+                    <p>文章摘要... <a href="#fff">阅读更多</a></p>
+                </div>
+            </article>
+            <article class="blog-post">
+                <img src="blog-more.jpg" alt="More">
+                <div class="blog-content">
+                    <h3><a href="#more">更多解密号码</a></h3>
+                    <p>文章摘要... <a href="#more">阅读更多</a></p>
+                </div>
+            </article>
+        </section>
+        <div style="margin-bottom: 80px;"></div>
 
-        <!-- 特别号码显示区域 -->
-        <div id="special-numbers"></div>
-        <div id="special-description"></div>
-        <!-- 在新增的解释内容区域下方添加优缺点的显示区域 -->
-        <div id="pros-and-cons" class="explanation-section">
-            <h2></h2>
-            <p><strong>优点:</strong> <span id="pros-content"></span></p>
-            <p><strong>缺点:</strong> <span id="cons-content"></span></p>
-        </div>
-        <!-- 新增的解释内容区域 -->
-        <div id="personality-traits" class="explanation-section">
-            <h2>个性特质</h2>
-            <p id="personality-traits-content"></p>
-        </div>
-        <div id="communication" class="explanation-section">
-            <h2>沟通之道</h2>
-            <p id="communication-content"></p>
-        </div>
-        <div id="talents" class="explanation-section">
-            <h2>天赋才能</h2>
-            <p id="talents-content"></p>
-        </div>
-        <div id="career-development" class="explanation-section">
-            <h2>生涯发展</h2>
-            <p id="career-development-content"></p>
-        </div>
-        <p><i>以上仅为生命数字最基本的计算调取结果，想要获取更多内容，包括健康与贵人方向，事业相关建议，请联系我们 :）</i></p>
-        <p style="font-size: xx-small;">The above is just a basic calculation result. To obtain more details, including health and auspicious directions, as well as career-related advice, please contact us.）</p>
+
+<hr>
+    <div class="bd-content">
+        <article id="mayun">
+            <h3>马云的富豪数字</h3>
+            <img src="bd-mayun.png" style="width:300px">
+            <div class="bd-p"><p></p>文章内容...</p></div>
+        </article>
+        
+        <article id="guotaiming">
+            <h3>郭台铭的富豪数字</h3>
+            <img src="bd-guotaiming.png" style="width:300px">
+            <div class="bd-p"><p></p>文章内容...</p></div>
+        </article>
+        
+        <article id="lijiacheng">
+            <h3>李嘉诚的富豪数字</h3>
+            <img src="bd-lijiacheng.png" style="width:300px">
+            <div class="bd-p"><p></p>文章内容...</p></div>
+        </article>
+        
+        <article id="yinengjing">
+            <h3>伊能静的出轨数字</h3>
+            <img src="bd-yinengjing.png" style="width:300px">
+            <div class="bd-p"><p></p>文章内容...</p></div>
+        </article>
+        
+        <article id="marong">
+            <h3>马蓉的出轨数字</h3>
+            <img src="bd-mayun.png" style="width:300px">
+            <div class="bd-p"><p></p>文章内容...</p></div>
+        
+        <article id="baibaihe">
+            <h3>白百何的出轨数字</h3>
+            <img src="bd-mayun.png" style="width:300px">
+            <div class="bd-p"><p></p>文章内容...</p></div>
+        </article>
+        
+        <article id="meiyanfang">
+            <h3>梅艳芳的癌症数字</h3>
+            <img src="bd-mayun.png" style="width:300px">
+            <div class="bd-p"><p></p>文章内容...</p></div>
+        </article>
+        
+        <article id="fff">
+            <h3>凤飞飞的癌症数字</h3>
+            <img src="bd-mayun.png" style="width:300px">
+            <div class="bd-p"><p></p>文章内容...</p></div>
+        </article>
+        
+        <article id="more">
+            <h3>更多解密号码</h3>
+            <img src="bd-mayun.png" style="width:300px">
+            <div class="bd-p"><p></p>文章内容...</p></div>
+        </article>
+    </div>
+    </section>
+
     </div>
     <script src="script.js"></script>
 </body>
