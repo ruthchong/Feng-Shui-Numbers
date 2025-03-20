@@ -194,6 +194,7 @@ nav ul li a:hover {
     color: #dfac11;
 }
 
+
 /* 响应式设计 */
 @media (max-width: 600px) {
 
@@ -392,26 +393,25 @@ nav ul li a:hover {
 /*FOOTER*/
 footer {
     flex: 1;
-    background-color: #1a1a1a;
+    background-color: #000000;
     color: #e2be0b;
     text-align: center;
     padding: 20px 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
+    position: relative; /* 让 footer 固定在底部 */
+    bottom: -18px;
+    left: 0;
+    width: 100vw; /* 确保 footer 沾满整个宽度 */
     box-shadow: 0 4px 12px rgba(255, 201, 23, 0.516);
 }
 
 .footer-content {
     max-width: 800px;
     margin: 0 auto;
-
 }
 
 .footer-content p {
     margin: 5px 0;
     font-size: 14px;
-    
 }
 
 .footer-links {
@@ -436,7 +436,6 @@ footer {
 .footer-links a:hover {
     text-decoration: underline;
 }
-
 .email-link {
     color: white;
     text-decoration: none;
